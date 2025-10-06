@@ -5,7 +5,9 @@ description = "Primeiro projeto com pyproject.toml"
 readme = "README.md"
 authors = [{ name = "Gregory J. Pitthan" }]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pytest>=8.4.2",
+]
 
 [project.urls]
 Repository = "https://github.com/Gregory-JP/uv-project"
