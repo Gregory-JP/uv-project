@@ -11,7 +11,7 @@ dependencies = []
 Repository = "https://github.com/Gregory-JP/uv-project"
 
 [project.scripts]
-environments-config = "environments_config.__main__:main"
+environments-config = "my_package.my_module:run_from_script"
 
 [project.optional-dependencies]
 dev = ["ruff", "pytest", "pyright", "pre-commit"]
@@ -47,7 +47,7 @@ indent-style = "space"
 line-ending = "lf"
 
 [tool.ruff.lint.isort]
-known-first-party = ["src"]
+known-first-party = ["my_package"]
 
 [tool.pyright]
 typeCheckingMode = "standard"
@@ -73,6 +73,11 @@ testpaths = ["tests"]
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

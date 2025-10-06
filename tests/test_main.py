@@ -1,8 +1,11 @@
 """Tests for the main module."""
 
-from environments_config.__main__ import main
+from my_package.my_module import my_function
+
+EXPECTED_SUM_RESULT = 6
 
 
 def test_main_returns_hello_world():
     """Tests if the main function returns the correct string."""
-    assert main() == "Your project is set up correctly!"
+    result = my_function(2, 4)
+    assert result == EXPECTED_SUM_RESULT

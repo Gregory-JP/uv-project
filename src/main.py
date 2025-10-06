@@ -3,13 +3,13 @@
 This script prints a greeting message when executed.
 """
 
-from .my_module import test_project
+from my_package.my_module import my_function
 
 
-def main() -> str:
+def run() -> int:
     """Print a greeting message."""
-    return test_project()
+    return my_function(x=2, y=4)
 
 
 if __name__ == "__main__":
-    main()
+    run()
