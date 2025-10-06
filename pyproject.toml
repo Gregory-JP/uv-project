@@ -1,0 +1,81 @@
+[project]
+name = "environments-config"
+version = "0.1.0"
+description = "Primeiro projeto com pyproject.toml"
+readme = "README.md"
+authors = [{ name = "Gregory J. Pitthan" }]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/seu-usuario/seu-repo"
+
+[project.scripts]
+environments-config = "environments_config.__main__:main"
+
+[project.optional-dependencies]
+dev = ["ruff", "pytest", "pyright"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+fix = true
+show-fixes = true
+indent-width = 4
+exclude = [".venv"]
+
+
+[tool.ruff.lint]
+select = ["ALL"]
+# ignore = [
+#     "T201",   # Checks for print statements, 
+#     "COM812", # Checks for the absence of trailing commas.
+#     "INP001", # Checks for packages that are missing an __init__.py file.
+#     "D",      # All pydocstyle (D)
+#     "ANN401", # Checks that function arguments are annotated with a more specific type than Any.
+#     "ERA001", # Checks for commented-out Python code.
+#     "A004",   # Shadowing Python Builtin
+#     "ANN201",   # Checks for missing return type annotations.
+# ]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["ANN201", "S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint.isort]
+known-first-party = ["src"]
+
+[tool.pyright]
+typeCheckingMode = "standard"
+pythonVersion = "3.11"
+include = ["src", "tests"]
+exclude = [
+    "**/venv",
+    "**/.venv",
+    "**/env",
+    "**/.env",
+    "**/node_modules",
+    "**/__pycache__",
+]
+venv = ".venv"
+venvPath = "."
+executionEnvironments = [{ root = "src" }]
+
+[tool.pytest.ini_options]
+addopts = "-s --color=yes --tb=short"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
