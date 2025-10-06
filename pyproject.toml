@@ -14,7 +14,7 @@ Repository = "https://github.com/Gregory-JP/uv-project"
 environments-config = "environments_config.__main__:main"
 
 [project.optional-dependencies]
-dev = ["ruff", "pytest", "pyright"]
+dev = ["ruff", "pytest", "pyright", "pre-commit"]
 
 [tool.ruff]
 line-length = 88
@@ -28,7 +28,7 @@ exclude = [".venv"]
 [tool.ruff.lint]
 select = ["ALL"]
 # ignore = [
-#     "T201",   # Checks for print statements, 
+#     "T201",   # Checks for print statements,
 #     "COM812", # Checks for the absence of trailing commas.
 #     "INP001", # Checks for packages that are missing an __init__.py file.
 #     "D",      # All pydocstyle (D)
