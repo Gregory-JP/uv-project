@@ -8,7 +8,6 @@ from my_package.my_module import my_function
 
 def run() -> int:
     """Print a greeting message."""
-    print("Hello, World!")
     return my_function(x=2, y=4)
 
 
