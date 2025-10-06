@@ -6,6 +6,10 @@ All you have to do is run:
 
 `uv sync`
 
+If you want to use pre-commits in your environment, you can run:
+
+`uv pip install -e ".[dev]”`
+
 ## Run The Project
 
 Just run on your terminal:
