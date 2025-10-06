@@ -10,6 +10,10 @@ If you want to use pre-commits in your environment, you can run:
 
 `uv pip install -e ".[dev]”`
 
+After that, make sure you have pre-commits activated:
+
+`pre-commit install`
+
 ## Run The Project
 
 Just run on your terminal:
