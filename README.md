@@ -2,20 +2,12 @@
 
 ## Set up the project
 
-For dev dependencies run:
+All you have to do is run:
 
-`uv pip install -e ".[dev]"`
-
-For use the pre commit run:
-
-`pre-commit install`
+`uv sync`
 
 ## Run The Project
 
-For run the project just use the commands:
-
-`uv pip install -e .`
-
-After that, just run on your terminal:
+Just run on your terminal:
 
 `environments-config`
