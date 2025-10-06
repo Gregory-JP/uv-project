@@ -19,9 +19,6 @@ wheels = [
 name = "environments-config"
 version = "0.1.0"
 source = { editable = "." }
-dependencies = [
-    { name = "pytest" },
-]
 
 [package.optional-dependencies]
 dev = [
@@ -33,7 +30,6 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "pyright", marker = "extra == 'dev'" },
-    { name = "pytest", specifier = ">=8.4.2" },
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "ruff", marker = "extra == 'dev'" },
 ]
