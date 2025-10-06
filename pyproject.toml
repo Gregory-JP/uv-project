@@ -8,7 +8,7 @@ requires-python = ">=3.11"
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/seu-usuario/seu-repo"
+Repository = "https://github.com/Gregory-JP/uv-project"
 
 [project.scripts]
 environments-config = "environments_config.__main__:main"
