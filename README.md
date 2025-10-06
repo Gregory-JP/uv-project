@@ -8,7 +8,7 @@ All you have to do is run:
 
 If you want to use pre-commits in your environment, you can run:
 
-`uv pip install -e ".[dev]”`
+`uv pip install -e ".[dev]”` or `uv sync --group dev`
 
 After that, make sure you have pre-commits activated:
 
